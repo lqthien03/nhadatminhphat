@@ -110,7 +110,7 @@
                     role="menu" data-accordion="false">
                     <!-- Bảng điều khiển -->
                     <li class="nav-item active">
-                        <a class="nav-link " href="/dashboard" title="Bảng điều khiển">
+                        <a class="nav-link " href="/admin" title="Bảng điều khiển">
                             <i class="nav-icon text-sm fas fa-tachometer-alt"></i>
                             <p>Bảng điều khiển</p>
                         </a>

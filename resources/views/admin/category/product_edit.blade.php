@@ -486,6 +486,10 @@
                                                         placeholder="Mô tả (vi)">{{ old('describe') ?? $product->describe }}</textarea>
                                                     <script>
                                                         CKEDITOR.replace('motavi', {
+                                                            extraPlugins: 'wordcount,lineheight',
+                                                        wordcount: {
+                                                            showCharCount: true
+                                                        },
                                                             filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
                                                             filebrowserUploadMethod: 'form'
                                                         });
@@ -501,6 +505,10 @@
                                                         placeholder="Nội dung (vi)">{{ old('content') ?? $product->content }}</textarea>
                                                     <script>
                                                         CKEDITOR.replace('noidungvi', {
+                                                            extraPlugins: 'wordcount,lineheight',
+                                                        wordcount: {
+                                                            showCharCount: true
+                                                        },
                                                             filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
                                                             filebrowserUploadMethod: 'form'
                                                         });

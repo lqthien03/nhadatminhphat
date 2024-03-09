@@ -483,9 +483,13 @@
                                                         placeholder="Nội dung (vi)">{{ old('content') ?? $real_estate->content }}</textarea>
                                                     <script>
                                                         CKEDITOR.replace('noidungvi', {
+                                                            extraPlugins: 'wordcount,lineheight',
+                                                            wordcount: {
+                                                                showCharCount: true
+                                                            },
                                                             filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
                                                             filebrowserUploadMethod: 'form',
-                                                            extraPlugins: 'lineheight'
+
                                                         });
                                                     </script>
 

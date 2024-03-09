@@ -485,9 +485,13 @@
                                                     <script src="ckeditor/build/ckeditor.js"></script>
                                                     <script>
                                                         CKEDITOR.replace('noidungvi', {
+                                                            extraPlugins: 'wordcount,lineheight',
+                                                            wordcount: {
+                                                                showCharCount: true
+                                                            },
                                                             filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
                                                             filebrowserUploadMethod: 'form',
-                                                            extraPlugins: 'lineheight'
+
                                                         });
                                                     </script>
 

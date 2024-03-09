@@ -438,8 +438,13 @@
                                                 </div>
                                                 <script>
                                                     CKEDITOR.replace('motavi', {
+                                                        extraPlugins: 'wordcount,lineheight',
+                                                        wordcount: {
+                                                            showCharCount: true
+                                                        },
                                                         filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
                                                         filebrowserUploadMethod: 'form'
+
                                                     });
                                                 </script>
                                                 <div class="form-group">
@@ -449,9 +454,12 @@
                                                 </div>
                                                 <script>
                                                     CKEDITOR.replace('noidungvi', {
+                                                        extraPlugins: 'wordcount,lineheight',
+                                                        wordcount: {
+                                                            showCharCount: true
+                                                        },
                                                         filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
                                                         filebrowserUploadMethod: 'form',
-                                                        extraPlugins: 'lineheight'
                                                     });
                                                 </script>
                                             </div>

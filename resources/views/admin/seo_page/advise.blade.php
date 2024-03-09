@@ -644,10 +644,10 @@
             var charCount = document.querySelector('.count-seo-description span');
 
             // Hiển thị số ký tự và giới hạn là 70
-            charCount.textContent = length + '/70 ký tự';
+            charCount.textContent = length + '/160 ký tự';
 
             // Nếu số ký tự vượt quá 70, thì thêm class 'over-limit' để hiển thị màu đỏ
-            if (length > 70) {
+            if (length > 160) {
                 charCount.parentElement.classList.add('over-limit');
             } else {
                 charCount.parentElement.classList.remove('over-limit');
