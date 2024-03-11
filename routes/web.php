@@ -105,6 +105,7 @@ Route::controller(ProductController::class)->group(function () {
     Route::post('/update-display-status-product/{id}', [ProductController::class, 'updateDisplayStatus'])->name('update-display-status-product');
     Route::post('/update-checkbox', [ProductController::class, 'updateCheckbox']);
     Route::post('/product', [ProductController::class, 'updateNumber'])->name('update.number_product');
+    Route::get('/product/copy/{id}', 'copy')->name('copy.product');
 });
 Route::controller(GalleryController::class)->group(function () {
     Route::get('/product/gallery/{product_id}', 'show')->name('show.gallery');

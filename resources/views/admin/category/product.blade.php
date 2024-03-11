@@ -482,9 +482,9 @@
                                                             class="far fa-clone mr-1"></i>Copy</a>
                                                     <ul aria-labelledby="dropdownCopy"
                                                         class="dropdown-menu border-0 shadow">
-                                                        <li><a href="#" class="dropdown-item copy-now"
-                                                                data-id="347" data-table="product"
-                                                                data-copyimg=""><i
+                                                        <li><a href="/product/copy/{{ $item->id }}"
+                                                                class="dropdown-item copy-now" data-id="347"
+                                                                data-table="product" data-copyimg=""><i
                                                                     class="far fa-caret-square-right text-secondary mr-2"></i>Sao
                                                                 chép ngay</a></li>
                                                         <li><a href="/product/edit/{{ $item->id }}"
@@ -562,8 +562,9 @@
                                                         class="far fa-clone"></i></a>
                                                 <ul aria-labelledby="dropdownCopy"
                                                     class="dropdown-menu border-0 shadow">
-                                                    <li><a href="" class="dropdown-item copy-now"
-                                                            data-id="347" data-table="product"><i
+                                                    <li><a href="/product/copy/{{ $item->id }}"
+                                                            class="dropdown-item copy-now" data-id="347"
+                                                            data-table="product"><i
                                                                 class="far fa-caret-square-right text-secondary mr-2"></i>Sao
                                                             chép ngay</a></li>
                                                     <li><a href="/real_estate/product/edit/{{ $item->id }}"

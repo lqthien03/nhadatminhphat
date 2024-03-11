@@ -333,4 +333,30 @@ class ProductController extends Controller
         $product->delete();
         return back()->with('messageSucces', 'Xóa thành công');
     }
+    public function copy($id)
+    {
+        $product = Product::where('id', $id)->first();
+
+        $seo = new Seo();
+        $seo->seo_tittle = $product->seo->seo_tittle;
+        $seo->seo_keyword = $product->seo->seo_keyword;
+        $seo->seo_description = $product->seo->seo_description;
+        $seo->save();
+
+        $new_product = new Product();
+        $new_product->link = $product->link;
+        $new_product->tittle = $product->tittle . ' copy';
+        $new_product->image = $product->image;
+        $new_product->display = $product->display;
+        $new_product->describe = $product->describe;
+        $new_product->content = $product->content;
+        $new_product->number = $product->number;
+        $new_product->level1_product_id = $product->level1_product_id;
+        $new_product->level2_product_id = $product->level2_product_id;
+        $new_product->seo_id = $seo->id;
+        $product->seo()->associate($seo);
+        // dd($new_product);
+        $new_product->save();
+        return redirect()->route('show.product')->with('success', 'Bản ghi đã được tạo thành công!');
+    }
 }
